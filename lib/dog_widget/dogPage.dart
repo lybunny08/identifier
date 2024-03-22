@@ -55,23 +55,23 @@ class _DogListPageState extends State<DogListPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Dog List'),
-        actions: [
-          IconButton(
-            icon: Icon(Icons.search),
-            onPressed: () async {
-              final String? query = await showSearch<String?>(
-                context: context,
-                delegate: DogSearchDelegate(),
-              );
-              if (query != null) {
-                filterDogsList(query);
-              }
-            },
-          ),
-        ],
-      ),
+      // appBar: AppBar(
+      //   title: Text('Dog List'),
+      //   actions: [
+      //     IconButton(
+      //       icon: Icon(Icons.search),
+      //       onPressed: () async {
+      //         final String? query = await showSearch<String?>(
+      //           context: context,
+      //           delegate: DogSearchDelegate(),
+      //         );
+      //         if (query != null) {
+      //           filterDogsList(query);
+      //         }
+      //       },
+      //     ),
+      //   ],
+      // ),
       body: filteredDogsList.isEmpty
           ? Center(
               child: SizedBox(

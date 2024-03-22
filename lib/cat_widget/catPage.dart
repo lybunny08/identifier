@@ -57,23 +57,23 @@ class _CatListPageState extends State<CatListPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Cat List'),
-        actions: [
-          IconButton(
-            icon: Icon(Icons.search),
-            onPressed: () async {
-              final String? query = await showSearch<String?>(
-                context: context,
-                delegate: DogSearchDelegate(),
-              );
-              if (query != null) {
-                filterDogsList(query);
-              }
-            },
-          ),
-        ],
-      ),
+      // appBar: AppBar(
+      //   title: Text('Cat List'),
+      //   actions: [
+      //     IconButton(
+      //       icon: Icon(Icons.search),
+      //       onPressed: () async {
+      //         final String? query = await showSearch<String?>(
+      //           context: context,
+      //           delegate: DogSearchDelegate(),
+      //         );
+      //         if (query != null) {
+      //           filterDogsList(query);
+      //         }
+      //       },
+      //     ),
+      //   ],
+      // ),
       body: filteredDogsList.isEmpty
           ? Center(
               child: Image.asset(

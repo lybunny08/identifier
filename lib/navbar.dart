@@ -52,18 +52,9 @@ class _NavBarState extends State<NavBar> {
                   _selectedIndex = 1;
                 });
               },
-              icon: const Icon(Icons.favorite),
+              icon: const Icon(Icons.photo_camera),
               color: _selectedIndex == 1 ? Colors.blue : Colors.grey,
             ),
-            // IconButton(
-            //   onPressed: () {
-            //     setState(() {
-            //       _selectedIndex = 2;
-            //     });
-            //   },
-            //   icon: const Icon(Icons.person),
-            //   color: _selectedIndex == 2 ? Colors.blue : Colors.grey,
-            // ),
           ],
         ),
       ),
@@ -73,7 +64,7 @@ class _NavBarState extends State<NavBar> {
   Widget _getBody(int index) {
     switch (index) {
       case 0:
-        return Home();
+        return const Home();
       case 1:
         return const Identifier();
       default:
